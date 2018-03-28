@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- lib -->
+  <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  <script src="./js/lib/FileSaver.js" charset="utf-8"></script>
+  <script src="./jquery/jquery.js" charset="utf-8"></script>
+  <!-- my lib -->
+  <script src="./js/mylib/random_graph.js" charset="utf-8"></script>
+  <script src="./js/mylib/force_layout.js" charset="utf-8"></script>
+</head>
+
+
+<body>
+  <!-- click in div, generate random graph with fixed node/edge number -->
+  <div id='random_graph'>
+    <button class="btn" id="save_graph"> Save Graph</button>
+  </div>
+  <!-- draw graph from node/link file, to verify the result of algorithm (pattern matching) -->
+  <div id='draw_graph'>
+    <button class="btn" id="show_graph"> Draw Graph</button>
+  </div>
+  <!-- show and check four corresponding patterns -->
+  <div id='four_patterns'>
+    <button class="btn" id="show_pattern"> Show Patterns</button>
+    <div class="ptn_div" id='ptn1'></div>
+    <div class="ptn_div" id='ptn2'></div>
+    <div class="ptn_div" id='ptn3'></div>
+    <div class="ptn_div" id='ptn4'></div>
+  </div>
+
+  <script>
+    // generate random graph
+    // num_edge need: <= 50 (2-3 s), otherwise, pattern match stuck
+    var num_nodes = 30, num_edge = 50;        //      num_edge <= num_nodes*(num_nodes-1)
+    random_graph.init("#random_graph", num_nodes, num_edge);   // number of nodes, links
+    
+
+    // draw patterns
+    $('#show_pattern').click(function(){ 
+      // csv file must have header !!
+      var pattern1_file = './data/pattern/pattern1.csv';
+      var pattern2_file = './data/pattern/pattern2.csv';
+      var pattern3_file = './data/pattern/pattern3.csv';
+      var pattern4_file = './data/pattern/pattern4.csv';
+      forceLayout.draw("ptn1", pattern1_file, [], []);   // nodes/links load from file
+      forceLayout.draw("ptn2", pattern2_file, [], []); 
+      forceLayout.draw("ptn3", pattern3_file, [], []); 
+      forceLayout.draw("ptn4", pattern4_file, [], []); 
+    });
+
+
+    
+  </script>
+</body>

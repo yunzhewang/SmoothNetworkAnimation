@@ -1,0 +1,105 @@
+/*  div style  */
+#random_graph{
+	margin: 0px auto;
+    width: 600px;
+    height: 500px;
+    margin-top: 10px;
+    margin-left: 65px;
+    float:left;
+    border-radius:6px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#draw_graph{
+	margin: 0px auto;
+    width: 600px;
+    height: 500px;
+    margin-top: 10px;
+    margin-right: 65px;
+    float: right;
+    border-radius:6px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#four_patterns{
+	margin: 0px auto;
+    width: 1456px;
+    height: 280px;
+    margin-top: 20px;
+    margin-left: 65px;
+    float: left;
+    border-radius:6px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+/*  div style  */
+
+
+/*  btn style  */
+.btn{
+	width: 126px;
+	height: 36px;
+	border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 138, 230,0.2);
+}
+
+#save_graph{
+	position: absolute;
+	top: 30px;
+	left: 90px;
+}
+
+#show_graph{
+	position: absolute;
+	top: 30px;
+	right: 530px;
+}
+
+#show_pattern{
+	position: absolute;
+	top: 550px;
+	left: 90px;
+}
+/*  btn style  */
+
+
+/*  graph style  */
+.link {stroke: black;}
+.node {stroke: white; stroke-width: 3px;}
+/*  graph style  */
+
+
+/*  pattern style  */
+.ptn_div{
+	width: 200px;
+	height: 200px;
+	border-radius:6px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#ptn1{
+	position: absolute;
+	top: 600px;
+	left: 120px;
+}
+
+#ptn2{
+	position: absolute;
+	top: 600px;
+	left: 360px;
+}
+
+#ptn3{
+	position: absolute;
+	top: 600px;
+	left: 600px;
+}
+
+#ptn4{
+	position: absolute;
+	top: 600px;
+	left: 840px;
+}
+
+/*  pattern style  */
